@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;   
+    /*border: solid 2px blue;*/
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;   
+}
+
+/* Flexbox */
+.flexbox {      
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    background: #1abc9c;
+    padding: 60px;
+    text-align: center;
+    color: #ffffff;
+}
+.nav {
+    justify-content: center;
+    background: #333;
+    padding: 15px;
+}
+.link { 
+    margin: 25px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.main {    
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.photo {
+    background: #aaa;
+    width: 80%;
+    height: 200px;
+}
+
+/* Prueba de container fijo */
+header {
+    border: solid 1px blue;
+}
+.events .container {
+    border: solid 2px purple;    
+    justify-content: center;    
+}
+.event-name {
+    background: white;            
+    width: 200px;
+    height: 200px;    
+    padding: 20px;
+    margin: 10px;
+}
+.footer {
+  background: red; 
+  padding: 0;  
+}
+.footer .container {
+    /*border: solid 1px blue;*/
+    height: 100px;
+}
+.container-app {
+    /*border: solid 2px blue;*/
+    display: flex;    
+    position: relative;
+    height: 100%;
+}
+.menu {        
+    width: 20%;
+    background: #eee;    
+    text-align: center;
+    /* border: solid 1px red; */
+    position: fixed;
+    height: 100%;
+}
+.hero {    
+    width: 80%;   
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* border: solid 1px red;     */
+    position: absolute;
+    right: 0;
+    height: auto;
+}
+.menu ul {
+    padding: 0;
+    margin: 0;
+    /*border: solid 1px green;*/
+    height: 100%;
+    padding-top: 50px;  
+    position: relative;  
+}
+.menu ul li {
+    display: block;
+    /*border: solid 1px green;*/
+    width: 100%;
+    margin: 0;    
+}
+.link {
+    text-decoration: none;  
+    text-align: left; 
+    color: black; 
+    /*border: solid 1px green;*/
+    width: 100%;
+    display: inline-block;
+    margin: 0;    
+    padding: 10px 15px;
+}
+.link:hover {
+    /*background: #e8f0fe;*/
+    background: #ddd;
+}
+.link.last {
+    /*border: solid 1px yellow;*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.link img {
+    /*border: solid 1px green;    */
+    height: 35px;
+    width: 35px;
+    margin: 0;
+    margin-right: 7px;
+}
+.link.last p {
+    /*border: solid 1px green;*/
+    font-size: 12px;
+}
+.link.new {    
+    margin-bottom: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.hero-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;    
+}
+.logo {
+    height: 40px;
+}
+.title {     
+    margin: 0;
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.5;
+}
+.section {    
+    margin-top: 15px;
+    
+}
+.section-2 {
+    border: solid 1px green;
+    height: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.button-add {
+    position: fixed;
+    width: 55px;
+    height: 55px;    
+    background: rgb(51, 103, 214) !important;
+    color: white;
+    display: block;
+    margin: 0 !important;    
+    padding: 0;
+    text-align: center;
+    line-height: 55px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 100% !important;
+    font-size: 32px;
+    z-index: 2;
+}
+.data-item {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px #ddd;
+    background: #ddd;
+    padding: 15px 15px;
+    margin-top: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.item-actions {    
+    text-align: center;
+    margin-top: 10px;
+}
+.item-actions a {
+    font-weight: normal;
+    color: rgb(51, 103, 214);
+    cursor: pointer;   
+    text-decoration: none; 
+}
+.form-alta input, .form-alta select, .form-alta button {
+    display: block;    
+    width: 70%;
+    height: 30px;
+    margin: 15px auto;
+    padding-left: 10px;
+    font-size: 1em;
+}
+.button-submit {
+    background: rgb(51, 103, 214);
+    border: none;
+    color: white;
+    cursor: pointer;    
+}
+.button-cancel {
+    background: #6c757d;
+    border: none;
+    color: white;
+    cursor: pointer; 
+}
+
+/* Layout Grid */
+.data {
+    /*border: solid 1px blue;  */
+    padding: 0;    
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: flex-start;    
+}
+.item {
+    /*border: solid 1px red;*/
+    background: #eee;
+    width: 24%;      
+    box-sizing: border-box;                      
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 15px 0;
+    padding-bottom: 10px;
+}
+.imageContainer {   
+    margin: 0;    
+    text-align: center;
+}
+.item-img {  
+    height: 75px;     
+}
+.item-details {
+    /*border: solid 1px green;*/
+    margin: 10px 0;
+}
+.item-details p {
+    /* border: solid 1px yellow; */
+    padding: 5px 5px; 
+    margin: 0;
+    text-align: center;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none !important;
+    }
+    .hero {
+        width: 100%;
+    }
+
+}
