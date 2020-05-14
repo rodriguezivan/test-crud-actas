@@ -15,14 +15,14 @@ function create() {
         })
         .then(data => {            
             alert(data.message);
-            window.location.href = "../index.html";
-        });
+            read();                        
+        });        
 }
 function dataForm() {
-    let formNumero = document.querySelector('.form-numero').value;
-    let formTitulo = document.querySelector('.form-titulo').value;
-    let formFecha = document.querySelector('.form-fecha').value;
-    let formEstado = document.querySelector('.form-estado').value;
+    let formNumero = document.querySelector('.form-numero.alta').value;
+    let formTitulo = document.querySelector('.form-titulo.alta').value;
+    let formFecha = document.querySelector('.form-fecha.alta').value;
+    let formEstado = document.querySelector('.form-estado.alta').value;
     
     let newData = {
         numero: formNumero,
@@ -45,7 +45,9 @@ function read() {
 function render(json) {
     let posts = JSON.stringify(json);
     let data = JSON.parse(posts);
-    let dataContainer = document.querySelector(".data");            
+    let dataContainer = document.querySelector(".data");
+    
+    dataContainer.innerHTML = "";
 
     data.forEach(element => { 
         let img = element.estado === "Aprobada" ? "img/sheet.png" : "img/sheet-out.png";                
@@ -58,7 +60,7 @@ function render(json) {
                         <p><strong>Título: </strong>${element.titulo}</p>
                         <p><strong>Estado: </strong>${element.estado}</p>
                         <div class="item-actions">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" onclick="dataEdit(${element.numero}, '${element.titulo}' , '${element.fecha}', '${element.estado}', ${element.id})">Editar</a>
+                            <a href="#" data-toggle="modal" data-target="#modal-update" onclick="dataEdit(${element.numero}, '${element.titulo}' , '${element.fecha}', '${element.estado}', ${element.id})">Editar</a>
                             <a>|</a>
                             <a onclick="remove(${element.id})">Borrar</a>
                         </div>                                             
@@ -95,9 +97,9 @@ function edit() {
             return response.json();
         })
         .then(data => {            
-            alert(data.message);
-            window.location.href = "./index.html";           
-        });    
+            alert(data.message);            
+            read();
+        });                
 }
 function dataEdit(numero, titulo, fecha , estado, id) {   
     var inputNumero = document.querySelector(".form-numero");    
@@ -106,14 +108,14 @@ function dataEdit(numero, titulo, fecha , estado, id) {
     var inputEstado = document.querySelector(".form-estado"); 
     var inputId = document.querySelector(".form-id");  
     var button = document.querySelector(".button-submit");         
-    
-    inputNumero.setAttribute("value", numero);        
-    inputTitulo.setAttribute("value", titulo);
-    inputFecha.setAttribute("value", fecha);
-    inputEstado.setAttribute("value", estado);   
-    inputId.setAttribute("value", id); 
+         
+    inputNumero.value = numero;  
+    inputTitulo.value = titulo;
+    inputFecha.value = fecha;
+    inputEstado.value = estado;
+    inputId.value = id;
 
-    button.setAttribute("onclick", "edit()");
+    button.setAttribute("onclick", "edit()");    
 }
 
 /* Delete */
@@ -130,9 +132,9 @@ function remove(id) {
         .then(response => {
             return response.json();
         })
-        .then(data => {            
-            alert(data.message);                                    
-            window.location.href = "./index.html";
+        .then(data => {                        
+            alert(data.message);   
+            read();                                             
         });        
     }    
 }

@@ -1,88 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema</title>
-    <link rel="icon" type="image/jpg" href="./img/logo.jpg"/>       
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>        
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&amp;display=swap" rel="stylesheet"/>        
-    <link rel="stylesheet" href="./css/styles.css"/> 
+    <link rel="icon" type="image/jpg" href="./img/logo.jpg"/> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/styles-init.css" />
 </head>
-<body>        
-    <div class="container-app">  
-        <nav class="menu">
-            <ul>
-                <li>
-                    <a class="link new" href="./init.html">Nuevo</a>
-                </li>
-                <li>
-                    <a class="link" href="#">Acta</a>
-                </li>
-                <li>
-                    <a class="link" href="./init.html">Ordenanza</a>
-                </li>
-                <li>
-                    <a class="link" href="#">Resolución</a>
-                </li>
-                <li class="link line">
-                    <hr/>
-                </li> 
-                <li>
-                    <a class="link" href="#">Orden del día</a>
-                </li>                                   
-                <li>                                                   
-                    <a class="link last"><img class="link-img" src="./img/person.png" alt=""/> <p>Iván Rodriguez</p></a>
-                </li>
-            </ul>
-        </nav>
-        <main class="hero">
-            <div class="hero-title">
-                <img class="logo" src="./img/logo.jpg" alt=""/>                
-                <h1 class="title">Sistema de alta</h1>
+
+<body>
+    <div class="container-app">
+        <figure>
+            <a href="./main.html">
+                <img class="app-image" src="img/logo.jpg" alt=""/>
+            </a>            
+        </figure>        
+        <div class="app-notification">
+            <div>                
+                <strong>Terminar: Acta N° 005</strong>
+                <a>x</a>
             </div>            
-            <hr/>
-            <div class="data"></div>
-        </main>                     
-    </div>
-    <!-- <a class="link new button-add" href="./pages/create.html">+</a> -->
-    <a class="link new button-add" href="#" data-toggle="modal" data-target="#exampleModal">+</a>         
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+            <div>                
+                <strong>Terminar: Acta N° 006</strong>
+                <a>x</a>
             </div>
-            <div class="modal-body">
-                <form class="form-alta" action="#">
-                    <input type="text" placeholder="Número" class="form-numero"/>
-                    <input type="text" placeholder="Titulo" class="form-titulo"/>
-                    <input type="date" placeholder="Fecha" class="form-fecha"/>
-                    <select class="form-estado">
-                        <option disabled>Estado</option>
-                        <option value="Aprobada">Aprobada</option>
-                        <option value="A consideración">A consideración</option>
-                        <option value="Desgrabar">Desgrabar</option>
-                    </select>
-                    <input type="hidden" class="form-id"/>
-                    <input class="button-submit" type="button" value="Guardar cambios">
-                    <button class="button-cancel" type="button" data-dismiss="modal">Cancelar</button>
-                </form>
-            </div>
-            <div class="modal-footer">                
-                <p>Modal footer</p>
-            </div>
-        </div>
+            <div>                
+                <strong>Notificación 3</strong>
+                <a>x</a>
+            </div>           
         </div>
     </div>
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script> 
 </body>
+
 </html>
