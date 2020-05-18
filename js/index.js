@@ -1,5 +1,5 @@
-// const API = "http://192.168.1.23:80/test/rest-api-php/index.php/actas";
-const API = "http://localhost/test/rest-api-php/index.php/actas";
+const API = "http://192.168.1.24:80/test/rest-api-php/index.php/actas";
+// const API = "http://localhost/test/rest-api-php/index.php/actas";
 
 /* Create */
 function create() {      
