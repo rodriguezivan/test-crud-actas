@@ -152,7 +152,7 @@ body {
 }
 .form-alta input, .form-alta select, .form-alta button {
     display: block;    
-    width: 70%;
+    width: 80%;
     height: 30px;
     margin: 15px auto;
     padding-left: 10px;

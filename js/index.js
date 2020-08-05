@@ -1,5 +1,5 @@
-const API = "http://192.168.1.24:80/test/rest-api-php/index.php/actas";
-// const API = "http://localhost/test/rest-api-php/index.php/actas";
+// const API = "http://192.168.1.24:80/test/rest-api-php/index.php/actas";
+const API = "http://localhost/test/rest-api-php/index.php/actas";
 
 /* Create */
 function create() {      
@@ -55,9 +55,9 @@ function render(json) {
                     <figure class="imageContainer">
                         <img class="item-img" src="${img}" alt="Logo de acta"/>
                     </figure>
-                    <div class="item-details">
-                        <p><strong>Número: </strong>${element.numero}</p>                        
+                    <div class="item-details">                       
                         <p><strong>Título: </strong>${element.titulo}</p>
+                        <p><strong>Fecha: </strong>${element.fecha}</p>
                         <p><strong>Estado: </strong>${element.estado}</p>
                         <div class="item-actions">
                             <a href="#" data-toggle="modal" data-target="#modal-update" onclick="dataEdit(${element.numero}, '${element.titulo}' , '${element.fecha}', '${element.estado}', ${element.id})">Editar</a>
@@ -66,7 +66,7 @@ function render(json) {
                         </div>                                             
                     </div>
                 </div>`;                
-        dataContainer.innerHTML += inner;                
+        dataContainer.innerHTML += inner;                    
     });   
 }
 
